@@ -1,0 +1,122 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-22T16:16:54.435Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "step_definitions.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Register new user",
+        "description": "",
+        "id": "user-management-page-tests;register-new-user",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I open \"http://automation.techleadacademy.io/#/usermgt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://automation.techleadacademy.io/#/usermgt\"",
+                  "offset": 7
+                }
+              ],
+              "location": "step_definitions.ClassTaskSteps.iOpen(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "I input \"Kuba\" as a \"firstname\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "I input \"Z\" as a \"lastname\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "I input \"444-444-4444\" as a \"phone number\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "I input \"kuba@tla.com\" as a \"email\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "I input \"Instructor\" as a \"role\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "I click a button \"Submit\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@registerUser"
+          }
+        ]
+      }
+    ],
+    "name": "User Management page tests",
+    "description": "",
+    "id": "user-management-page-tests",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UserMgt.feature",
+    "tags": []
+  }
+]
