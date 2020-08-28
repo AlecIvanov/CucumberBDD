@@ -9,6 +9,8 @@ public class HomePage {
     public HomePage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(id = "")
     public WebElement element;
+
 }

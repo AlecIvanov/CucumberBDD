@@ -10,6 +10,7 @@ public class CommonPage {
     public CommonPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    public static final  String CURRENT_DATETIME = LocalDateTime.now().format((DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss")));
+
+    public static final String CURRENT_DATETIME = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss"));
 
 }

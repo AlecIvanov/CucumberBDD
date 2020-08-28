@@ -32,7 +32,6 @@ public class SeleniumUtils {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
     }
-
     public static void waitForPageToLoad(){
         ExpectedCondition<Boolean> pageLoadCondition = driver -> ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
@@ -61,7 +60,6 @@ public class SeleniumUtils {
         highlightElement(element);
         return element.getText();
     }
-
     public static void moveIntoView(WebElement element){
         try{
             ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -79,7 +77,7 @@ public class SeleniumUtils {
                 if(i == 0){
                     executor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "color: black; border:3px solid red; background: yellow");
                 }else {
-                    sleep(1000);
+                    sleep(300);
                     executor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "");
                 }
             }catch (Exception e){
@@ -87,5 +85,5 @@ public class SeleniumUtils {
             }
         }
     }
-
 }
+

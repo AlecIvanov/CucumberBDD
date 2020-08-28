@@ -30,8 +30,8 @@ public class ClassTaskSteps {
     @Then("I verify title is {string}")
     public void iVerifyTitleIs(String title) {
         Assert.assertEquals(title, Driver.getDriver().getTitle());
+        CucumberUtils.logInfo("Actual title is: " + Driver.getDriver().getTitle(), true);
     }
-
     @When("I click {string} button")
     public void iClickButton(String button) {
         String xpath = "";

@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class Hooks {
     private static WebDriver driver;
     public static Scenario currentScenario;
+
     @Before
     public void setUp(Scenario scenario){
         driver = Driver.getDriver();
@@ -19,6 +20,7 @@ public class Hooks {
         driver.manage().window().maximize();
         currentScenario = scenario;
     }
+
     @After
     public void tearDown(Scenario scenario){
         if (scenario.isFailed()) {

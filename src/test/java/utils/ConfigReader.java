@@ -6,17 +6,19 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    public static String readProperty(String property, String filePath) {
+    public static String readProperty(String property, String filePath){
         Properties prop = null;
+
         try {
-            FileInputStream fileInputStream = new FileInputStream(filePath);
+            FileInputStream fileInput = new FileInputStream(filePath);
             prop = new Properties();
-            prop.load(fileInputStream);
-        } catch (FileNotFoundException e) {
+            prop.load(fileInput);
+        }catch (FileNotFoundException e){
             e.printStackTrace();
-        } catch (IOException e1) {
+        }catch (IOException e1){
             e1.printStackTrace();
         }
+
         return prop.getProperty(property);
     }
 }
