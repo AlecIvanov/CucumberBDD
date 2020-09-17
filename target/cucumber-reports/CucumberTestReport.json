@@ -3,26 +3,27 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-22T16:16:54.435Z",
+        "start_timestamp": "2020-09-06T18:56:06.077Z",
         "before": [
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 6247000000,
+              "status": "passed"
             },
             "match": {
               "location": "step_definitions.Hooks.setUp(io.cucumber.java.Scenario)"
             }
           }
         ],
-        "line": 8,
-        "name": "Register new user",
+        "line": 3,
+        "name": "postgres testing demoHR departments",
         "description": "",
-        "id": "user-management-page-tests;register-new-user",
+        "id": "query-database-demohr;postgres-testing-demohr-departments",
         "after": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 383000000,
+              "status": "passed"
             },
             "match": {
               "location": "step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -34,89 +35,113 @@
         "steps": [
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 102000000,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "I open \"http://automation.techleadacademy.io/#/usermgt\"",
+            "line": 4,
+            "name": "user establish connection to dataBase \"demoHR\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"http://automation.techleadacademy.io/#/usermgt\"",
-                  "offset": 7
+                  "val": "\"demoHR\"",
+                  "offset": 38
                 }
               ],
-              "location": "step_definitions.ClassTaskSteps.iOpen(java.lang.String)"
+              "location": "step_definitions.demoHR.user_establish_connection_to_dataBase(java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 14000000,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "I input \"Kuba\" as a \"firstname\"",
-            "match": {},
-            "keyword": "When "
+            "line": 5,
+            "name": "user executes query \"select * from departments\" and verifies result \"Sales\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select * from departments\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Sales\"",
+                  "offset": 68
+                }
+              ],
+              "location": "step_definitions.demoHR.user_executes_query_and_verifies_result(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 13000000,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "I input \"Z\" as a \"lastname\"",
-            "match": {},
-            "keyword": "And "
+            "line": 6,
+            "name": "user executes query \"select * from employees limit 1\" and verifies column name \"dep_name\" and result value \"Finance\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select * from employees limit 1\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"dep_name\"",
+                  "offset": 79
+                },
+                {
+                  "val": "\"Finance\"",
+                  "offset": 107
+                }
+              ],
+              "location": "step_definitions.demoHR.user_executes_query_and_verifies_column_name_and_result_value(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1000000,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "I input \"444-444-4444\" as a \"phone number\"",
-            "match": {},
-            "keyword": "And "
+            "line": 7,
+            "name": "user gets total row count for query \"select * from departments\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select * from departments\"",
+                  "offset": 36
+                }
+              ],
+              "location": "step_definitions.demoHR.user_gets_total_row_count_for_query(java.lang.String)"
+            },
+            "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1000000,
+              "status": "passed"
             },
-            "line": 13,
-            "name": "I input \"kuba@tla.com\" as a \"email\"",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "line": 8,
+            "name": "user closes connection to database",
+            "match": {
+              "location": "step_definitions.demoHR.user_closes_connection_to_database()"
             },
-            "line": 14,
-            "name": "I input \"Instructor\" as a \"role\"",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 15,
-            "name": "I click a button \"Submit\"",
-            "match": {},
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@registerUser"
+            "name": "@demoHR"
           }
         ]
       }
     ],
-    "name": "User Management page tests",
+    "name": "Query database demoHR",
     "description": "",
-    "id": "user-management-page-tests",
+    "id": "query-database-demohr",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/UserMgt.feature",
+    "uri": "file:src/test/resources/features/demoHR.feature",
     "tags": []
   }
 ]

@@ -15,5 +15,5 @@ Feature: Class tasks
   @chase
   Scenario: Testing chase bank
     Given I open "chase bank"
-    Then I verify title is "Credit Card, Mortgage, Banking, Auto | Chase Online | Chase.com"
+    Then I verify title is "Credit Card, Mortgage, Banking, Auto | Chase Online | Chase.comS"
     When I click "ATM & branch" button

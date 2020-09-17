@@ -3,6 +3,7 @@ package step_definitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.Driver;
 import utils.Screenshot;
@@ -26,6 +27,6 @@ public class Hooks {
         if (scenario.isFailed()) {
             Screenshot.takeScreenshot();
         }
-        Driver.quitDriver();
+        //Driver.quitDriver();
     }
 }
